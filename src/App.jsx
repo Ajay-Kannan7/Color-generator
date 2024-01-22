@@ -62,11 +62,11 @@ const App = () => {
             <p>Hex : {tint}</p>
           </div>
         ))}
-        <div className="color" style={{backgroundColor:initialColor}}>
+        <div className="color" style={{backgroundColor:initialColor}} onClick={()=>{handleClipBoard(tint)}}>
           <p>Hex : {initialColor}</p>
         </div>
         {shades.map((shade,index)=>(
-          <div key={index} className="color" style={{backgroundColor:shade,color:"white"}}>
+          <div key={index} className="color" style={{backgroundColor:shade,color:"white"}} onClick={()=>{handleClipBoard(tint)}}>
             <p>Hex : {shade}</p>
           </div>
         ))}
